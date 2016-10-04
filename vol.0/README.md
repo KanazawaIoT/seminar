@@ -13,5 +13,5 @@
 
 ![ブレッドボード1](images/breadboard1.jpg  "ブレッドボード1")
 
-![ブレッドボード2](images/BME280_TWELite.jpg  "ブレッドボード2")
+![ブレッドボード2](images/breadboard2.jpg  "ブレッドボード2")
 
