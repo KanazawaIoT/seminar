@@ -33,13 +33,13 @@
 (Linuxでの書き込み方法もあったはずなので、要調査)
 
 
-#### ファーム書き込みソフト(Windows)を公式からダウンロードして来てインストールする。
+#### ファーム書き込みソフト(Windows)を公式からダウンロードして来てインストールする
 
 [TWE-LITE用プログラマ公式ページ](http://mono-wireless.com/jp/tech/misc/LiteProg/index.html)
 から TWE-LITE プログラマ 0.3.4.3 をダウンロードしてインストールする。
 
 
-#### ファームを公式からダウンロードしてきて、展開する。
+#### ファームを公式からダウンロードしてきて、展開する
 
 [無線タグアプリ （Samp_Monitor）ダウンロード](http://mono-wireless.com/jp/products/TWE-APPS/Samp_monitor/download.html)
 から、ファームウェア v1.5.5 βをダウンロードして、展開する。
@@ -69,7 +69,7 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 2. MonoStickをWin機にUSB接続する。
 3. 書き込みソフトを使って書き込む。
 
-## 子機・親機ともにシリアル接続して設定する。
+## 子機・親機ともにシリアル接続して設定する
 
 ### 子機の設定
 
