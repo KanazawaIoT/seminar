@@ -38,6 +38,11 @@
 [TWE-LITE用プログラマ公式ページ](http://mono-wireless.com/jp/tech/misc/LiteProg/index.html)
 から TWE-LITE プログラマ 0.3.4.3 をダウンロードしてインストールする。
 
+#### ファーム書き込みソフト(Linux, OSX, Windows)を公式からダウンロードして来てインストールする
+
+[jenprog フラッシュプログラマ](http://mono-wireless.com/jp/tech/misc/jenprog/index.html)
+
+Python Script製なので、これで書き込めそう。
 
 #### ファームを公式からダウンロードしてきて、展開する
 
