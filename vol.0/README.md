@@ -58,14 +58,14 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
 ### TWELite PCBの書き換え
 
-1. Win機とTWELITE-RをUSBケーブルで接続する。
-2. TWELITE-RにTWELiteをセットする。
+1. TWELITE-RにTWELiteをセットする。
+2. Win機とTWELITE-RをUSBケーブルで接続する。
 3. 書き込みソフトを使って書き込む。
 
 
 ### MonoStickの書き換え
 
-1. Win機とTWELITE-RをUSBケーブルで接続する。
+1. Win機のUSBスロットにMonoStickを差し込む
 2. MonoStickをWin機にUSB接続する。
 3. 書き込みソフトを使って書き込む。
 
@@ -73,8 +73,8 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
 ### 子機の設定
 
-1. Win機とTWELITE-RをUSBケーブルで接続する。
-2. TWELITE-RにTWELiteをセットする。
+1. TWELITE-RにTWELiteをセットする。
+2. Win機とTWELITE-RをUSBケーブルで接続する。
 3. M2 ピンを GND に落とし、TWELITE-Rのリセットスイッチを押す。
 4. teratermでシリアル接続する。
 5. リターンキーを押すと設定画面が表示される。
@@ -82,8 +82,8 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
 ### 親の設定
 
-1. Win機のUSBにMonoStickを差し込む
-4. teratermでシリアル接続する。
-5. +++ を入力すると設定画面が表示される。
-6. 各項目を入力し、最後に'S'で設定書き込み。
+1. Win機のUSBスロットにMonoStickを差し込む
+2. teratermでシリアル接続する。
+3. +++ を入力すると設定画面が表示される。
+4. 各項目を入力し、最後に'S'で設定書き込み。
 
