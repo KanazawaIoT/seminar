@@ -100,8 +100,8 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
 ```
 --- CONFIG/Samp_Monitor V1-05-5/SID=0x810e00a7/LID=0x01/RC=9125 ---
- a: set Application ID (0x67726305)
- i: set Device ID (1=0x01)
+ a: set Application ID (0x67726305)*
+ i: set Device ID (1=0x01)*
  c: set Channels (15)
  x: set Tx Power (13)
  d: set Sleep Dur (5000)
@@ -139,9 +139,7 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 ると正しくできていれば、以下のようなシリアル表示がされるはず。
 
 tsの行は空なので無視。rcの行の
-`id`が上記で設定した子機のid、`ba`がバッテリー残量(mV)、`tm`が気温(100
-で割ると℃)、`hu`が湿度(100で割ると%)、`at`が気圧(100で割るとヘクトパスカル)
-となる。
+`id`が上記で設定した子機のid、`ba`がバッテリー残量(100で割るとmV)、`tm`が気温(100で割ると℃)、`hu`が湿度(100で割ると%)、`at`が気圧(ヘクトパスカル)となる。
 
 ```
 ::rc=80000000:lq=150:ct=0005:ed=810E00A7:id=1:ba=3280:a1=2161:a2=1051:tm=2805:hu=6475:at=1009
