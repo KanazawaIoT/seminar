@@ -85,6 +85,8 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 5. リターンキーを押すと設定画面が表示される。
 6. 各項目を入力し、最後に'S'で設定書き込み。
 
+![参考：TWELite M2とGNDピン](images/M2pin_GND.png  "参考：TWELite M2とGNDピン")
+
 ### 親の設定
 
 1. Win機のUSBスロットにMonoStickを差し込む
