@@ -87,7 +87,7 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
 ![参考：TWELite M2とGNDピン](images/M2pin_GND.png  "参考：TWELite M2とGNDピン")
 
-### 親の設定
+### 親機の設定
 
 1. Win機のUSBスロットにMonoStickを差し込む
 2. teratermでシリアル接続する。
