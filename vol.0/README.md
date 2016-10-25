@@ -61,6 +61,12 @@ or
 
 Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 
+### MonoStickの書き換え
+
+1. Win機のUSBスロットにMonoStickを差し込む
+2. MonoStickをWin機にUSB接続する。
+3. 書き込みソフトを使って書き込む。
+
 ### TWELite PCBの書き換え
 
 1. TWELITE-RにTWELiteをセットする。
@@ -68,13 +74,9 @@ Samp_Monitor/Parent/Build/Samp_Monitor_Parent_JN5164_ToCoStick_1_5_5.bin
 3. 書き込みソフトを使って書き込む。
 
 
-### MonoStickの書き換え
-
-1. Win機のUSBスロットにMonoStickを差し込む
-2. MonoStickをWin機にUSB接続する。
-3. 書き込みソフトを使って書き込む。
-
 ## 子機・親機ともにシリアル接続して設定する
+
+シリアル接続をする際、通信速度は115200に設定すること。
 
 ### 子機の設定
 
