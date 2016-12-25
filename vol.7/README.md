@@ -59,5 +59,5 @@ $ aws cloudwatch put-metric-data --namespace aiba/test --dimensions DeviceId=Ter
 
 
 # 計測値を表示する画面
-[AWS CloudWatch](https://ap-northeast-1.console.aws.amazon.com/cloudwatch/)  
+[https://173822656103.signin.aws.amazon.com/console](https://173822656103.signin.aws.amazon.com/console)  
 ※ログインIDとパスワードは当日お伝えします
