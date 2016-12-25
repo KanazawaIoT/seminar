@@ -27,7 +27,6 @@ $ aws --version ←動作確認
 ```
 pi@raspberrypi:~ $ aws --version
 aws-cli/1.11.34 Python/2.7.9 Linux/4.4.34-v7+ botocore/1.4.91
-pi@raspberrypi:~ $
 ```
 
 ## AWS CLI の初期設定
