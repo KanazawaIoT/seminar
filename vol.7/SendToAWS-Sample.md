@@ -23,7 +23,7 @@ $ sudo chmode og+rw /dev/ttyUSB0
 
 ## サンプルソースコード
 
-`vim main.rb` で作成開始。もしくは `wget https://raw.githubusercontent.com/KanazawaIoT/seminar/master/vol.7/main.rb` でダウンロードしてください。
+`vim main.rb` で作成開始。もしくは `wget https://bit.ly/k-iot-code -O main.rb` でダウンロードしてください。
 
 ``` ruby
 # coding: utf-8
