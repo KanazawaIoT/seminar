@@ -23,9 +23,11 @@ $ sudo chmode og+rw /dev/ttyUSB0
 
 ## サンプルソースコード
 
-`vim main.rb` で作成開始。
+`vim main.rb` で作成開始。もしくは `wget https://raw.githubusercontent.com/KanazawaIoT/seminar/master/vol.7/main.rb` でダウンロードしてください。
 
 ``` ruby
+# coding: utf-8
+
 require 'rubygems'
 gem 'serialport','>=1.0.4'
 require 'serialport'
