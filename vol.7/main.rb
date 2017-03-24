@@ -15,7 +15,7 @@ loop do
   next if v.length < 10
   time = Time.now.xmlschema # iso8601 型式で現在を取得
   tm = v[10].split('=')[1].to_i/100.0 # 温度は100倍されてくるので割る。
-  v = "aws cloudwatch put-metric-data --namespace #{namespace} --dimensions DeviceId=Terumo --metric-name BodyTemp --timestamp #{time} --value #{tm}"
+  v = "aws cloudwatch put-metric-data --namespace #{namespace} --dimensions DeviceId=Terumo --metric-name Temp --timestamp #{time} --value #{tm}"
   puts v # コマンド表示
   puts system v # 実行 & 結果表示(成功すると true 失敗すると false が表示される)
 end
