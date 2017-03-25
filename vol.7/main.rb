@@ -8,7 +8,7 @@ gem 'serialport','>=1.0.4'
 require 'serialport'
 require 'time'
 
-def send_to_aws(metric_name, v, position) do
+def send_to_aws(metric_name, v, position)
   time = Time.now.xmlschema # iso8601 型式で現在を取得
   tm = v[position].split('=')[1].to_i/100.0
   cmd = "aws cloudwatch put-metric-data --namespace #{namespace} --dimensions DeviceId=#{device_id} --metric-name #{metric_name} --timestamp #{time} --value #{tm}"
