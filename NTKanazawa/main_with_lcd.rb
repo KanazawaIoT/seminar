@@ -24,7 +24,7 @@ end
 class SensorData
   def initialize(data)
     @values = data.to_s.strip.split(':')
-    @id = @values[6].split('=') if @values.length < 7
+    @id = @values[6].split('=') if @values.length > 7
   end
 
   def invalid?
@@ -83,7 +83,7 @@ loop do
   data = SensorData.new(line)
   next if data.invalid?
 
-  s = AWSSender.new(values[6].split('=')[1])
+  s = AWSSender.new(data.id)
   lcd = LCD.new(0x3e, '/dev/i2c-1')
   sleep 0.1
 
