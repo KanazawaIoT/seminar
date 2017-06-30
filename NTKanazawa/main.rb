@@ -9,7 +9,7 @@ require 'serialport'
 require 'time'
 
 class AWSSender
-  def initializer(device_id = DEVICE_ID)
+  def initialize(device_id = DEVICE_ID)
     @device_id = device_id
   end
   def send_to_aws(metric_name, v, position)
