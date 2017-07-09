@@ -19,8 +19,7 @@ class AWSSender
     time = Time.now.xmlschema # iso8601 型式で現在を取得
     cmd = "aws cloudwatch put-metric-data --namespace #{NAMESPACE} --dimensions DeviceId=#{@device_id} --metric-name #{metric_name} --timestamp #{time} --value #{v}"
     puts cmd # コマンド表示
-    # puts system cmd # 実行 & 結果表示(成功すると true 失敗すると false が表示される)
-    Open3.popen3("#{cmd} > /dev/null 2>&1") 
+    Open3.popen3("#{cmd} > /dev/null 2>&1")
   end
 end
 
@@ -80,7 +79,31 @@ class LCD
   end
 end
 
+class State
+  def initialize
+    @value1 = 0
+    @value2 = 0
+  end
+  def new_value(v)
+    @value1 = @value2
+    @value2 = v
+  end
+  def self.hot?(v)
+    v.to_i > 37
+  end
+  def hot?
+    self.class.hot?(@value2)
+  end
+  def to_hot?
+    self.class.hot?(@value1) == false && self.class.hot?(@value2) == true
+  end
+  def to_cool?
+    self.class.hot?(@value1) == true && self.class.hot?(@value2) == false
+  end
+end
+
 sp = SerialPort.new('/dev/ttyUSB0', 115200, 8, 1, 0) # 115200, 8bit, stopbit 1, parity none
+state = State.new
 loop do
   line = sp.gets # read
   data = SensorData.new(line)
@@ -97,4 +120,7 @@ loop do
   s.send_to_aws('Temp', data.temp)
   s.send_to_aws('Hum', data.hum)
   s.send_to_aws('At', data.at)
+  state.new_value(data.temp)
+  system 'irsend --count=2 SEND_ONCE ROBO RIGHT' if state.to_hot?
+  system 'irsend --count=2 SEND_ONCE ROBO RIGHT' if state.to_cool?
 end
