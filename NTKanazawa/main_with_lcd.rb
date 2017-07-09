@@ -8,6 +8,8 @@ gem 'serialport','>=1.0.4'
 require 'serialport'
 require 'time'
 require 'i2c'
+require 'open3'
+
 
 class AWSSender
   def initialize(device_id = DEVICE_ID)
@@ -17,7 +19,8 @@ class AWSSender
     time = Time.now.xmlschema # iso8601 型式で現在を取得
     cmd = "aws cloudwatch put-metric-data --namespace #{NAMESPACE} --dimensions DeviceId=#{@device_id} --metric-name #{metric_name} --timestamp #{time} --value #{v}"
     puts cmd # コマンド表示
-    puts system cmd # 実行 & 結果表示(成功すると true 失敗すると false が表示される)
+    # puts system cmd # 実行 & 結果表示(成功すると true 失敗すると false が表示される)
+    Open3.popen3("#{cmd} > /dev/null 2>&1") 
   end
 end
 
