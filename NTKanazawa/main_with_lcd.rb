@@ -89,7 +89,7 @@ class State
     @value2 = v
   end
   def self.hot?(v)
-    v.to_i > 37
+    v.to_i > 33
   end
   def hot?
     self.class.hot?(@value2)
@@ -120,6 +120,8 @@ loop do
   s.send_to_aws('Temp', data.temp)
   s.send_to_aws('Hum', data.hum)
   s.send_to_aws('At', data.at)
+
+  next if data.id.to_i != 2
   state.new_value(data.temp)
   system 'irsend --count=2 SEND_ONCE ROBO RIGHT' if state.to_hot?
   system 'irsend --count=2 SEND_ONCE ROBO RIGHT' if state.to_cool?
