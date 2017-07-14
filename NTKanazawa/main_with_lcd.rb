@@ -113,9 +113,9 @@ loop do
   lcd = LCD.new(0x3e, '/dev/i2c-1')
   sleep 0.1
 
-  lcd.write("Temp=#{data.temp.round(2)}")
+  lcd.write("ID=#{data.id} Temp=#{data.temp.round(1)}")
   lcd.newline
-  lcd.write("Hum=#{data.hum.round(2)}")
+  lcd.write("Hum=#{data.hum.round(1)}")
 
   s.send_to_aws('Temp', data.temp)
   s.send_to_aws('Hum', data.hum)
