@@ -32,6 +32,6 @@ lcd = LCD.new(0x3e, '/dev/i2c-1')
 sleep 0.1
 
 require 'socket'
-lcd.write(Socket.getifaddrs.select{|x| x.addr.ipv4?}.map{ |x| x.addr.ip_address}.join(','))
+lcd.write(Socket.getifaddrs.select{|x| x.addr.ipv4? && x.addr.ip_address != '127.0.0.1' }.map{ |x| x.addr.ip_address}.join(','))
 #lcd.newline
 #lcd.write('World!')
