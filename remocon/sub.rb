@@ -46,5 +46,9 @@ MQTT::Client.connect(host: "a1f18lql3l5z0z.iot.ap-northeast-1.amazonaws.com",
     lcd.write("#{topic}")
     lcd.newline
     lcd.write("#{message}")
+    if message.to_f > 30.0
+      # 30度を超えたらビームを出す
+      # system 'irsend SEND_ONCE LIGHT ON'
+    end
   end while true
 end
